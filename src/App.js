@@ -20,9 +20,9 @@ function App() {
       <About />
       <Photos />
       <Accommodations />
+      <Gastronomy />
       <Promotions />
       <Location />
-      <Gastronomy />
       <Events />
       <Footer />
     </div>

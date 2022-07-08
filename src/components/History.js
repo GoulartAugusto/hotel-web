@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import History01 from '../images/history_01.jpg';
-import History02 from '../images/history_02.jpg';
-import History03 from '../images/history_03.jpg';
+import History02 from '../images/history_03.jpg';
+import History03 from '../images/history_02.jpg';
+import LogoWhite from '../images/master-logo_white.png';
 import { useState } from "react";
 import ArrowL from '../images/arrowleft.png';
 import ArrowR from '../images/arrowright.png';
@@ -41,6 +42,7 @@ function History() {
             )
               })}      
       </Wrapper>
+      <Logo src={LogoWhite} />
       <Text>Exclusive Luxury Hotel in Brazil</Text>
       <Text02>-TOP 100 IN THE WORLD-</Text02>
       <ArrowRight onClick={() => handleArrow("r")}><Arrows src={ArrowR} /></ArrowRight>
@@ -54,16 +56,18 @@ export default History
 const Container = styled.div`
     height: 100vh;
     overflow: hidden;
-
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
     @media screen and (max-width: 480px) {
-        height: 50vh;
+        height: 100vh;
     }
 `
 
 const Wrapper = styled.div`
     width: 100vw;
     display: flex;
-    transition: all 1.5s ease-in-out;
+    transition: all ease 0.25s;
 `
 const ImageContainer = styled.div`
     width: 100vw;
@@ -76,28 +80,50 @@ const Image = styled.img`
     height: 100vh;
 `
 
+const Logo = styled.img`
+    position: absolute;
+    width: 200px;
+    top: 14%;
+    right: 42%;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+
+`
+
 const Text = styled.h1`
     color: white;
     text-shadow: 5px 1px 4px black;
-    font-size: 3rem;
+    font-size: 2.7rem;
     position: absolute;
     top: 40%;
     right: 16%;
-    z-index: 100;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0.4rem;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+        position: absolute;
+        top: 40%;
+    }
 `
 
 const Text02 = styled.h1`
     color: white;
     text-shadow: 5px 1px 4px black;
-    font-size: 2.2rem;
+    font-size: 2rem;
     position: absolute;
     top: 52%;
     right: 28%;
-    z-index: 100;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0.4rem;
+
+    @media screen and (max-width: 480px) {
+        position: absolute;
+        top: 55%;
+        right: 0%;
+    }
 `
 
 const ArrowLeft = styled.div`
@@ -122,6 +148,9 @@ const ArrowRight = styled.div`
     margin: auto;
     cursor: pointer;
     z-index: 2;
+    @media screen and (max-width: 480px) {
+        margin-right: 2rem;
+    }
 `
 
 const Arrows = styled.img`

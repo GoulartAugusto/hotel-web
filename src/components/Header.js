@@ -1,18 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoWhite from '../images/master-logo_white.png';
+import { useState } from 'react'
 
 
 function Header() {
+  const [activeNav, setActiveNav] = useState("#");
   return (
     <Container>
-      <Logo src={LogoWhite} />
+      <a href="#" id="click">
+        <Logo src={LogoWhite} />
+      </a>
+      <a href="#about" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>The Hotel</Option>
+      </a>
+      <a href="#photos" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Photos</Option>
+      </a>
+      <a href="#accommodations" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Accommodations</Option>
+      </a>
+      <Option>Gastronomy</Option>
       <Option>Promotions</Option>
       <Option>Location</Option>
-      <Option>Gastronomy</Option>
       <Option>Events</Option>
       <Book>Book</Book>
     </Container>
@@ -25,27 +35,39 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    gap: 1rem;
-    background-image: linear-gradient(rgb(111, 111, 111) 50%,  transparent);
+    gap: 2rem;
+    background-image: linear-gradient(rgb(111, 111, 111) 50%, transparent);
     position: fixed;
     width: 100vw;
     color: white;
     padding-top: 0.5rem;
     z-index: 10;
+    text-decoration: none;
+    #click {
+      text-decoration: none;
+      color: white;
+
+    }
 `
 
 const Logo = styled.img`
-    width: 120px;
+    width: 80px;
     margin-right: 2rem;
     margin-left: 2rem;
+    :hover {
+        cursor: pointer;
+    }
 `
 
 const Option = styled.a`
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
     :hover {
         cursor: pointer;
-        color: deeppink;
+        color: goldenrod;
     }
 `
 
