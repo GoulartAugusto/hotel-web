@@ -15,8 +15,8 @@ function Gastronomy() {
         </Background>
         <Background>
         <h1 className='space'>Gastronomic Space</h1>
-        <Text></Text>
         </Background>
+        <Text>Drink the most classics cocktails of our list and some original blends over live music everyday on the rooftop bar the Don Hardan. Take the best sunset views at Mosaic Restaurant with specials food of famous Chefs recognized worldwide. Just relax and enjoy the good company.</Text>
       </Container>
   )
 }
@@ -39,7 +39,8 @@ const Container = styled.div`
       border-bottom: 1px solid white;
       color: whitesmoke;
       font-family: 'Times New Roman', Times, serif;
-    }
+    } 
+
 `
 
 const Background = styled.div`
@@ -69,6 +70,10 @@ const Image02 = styled.img`
       opacity: 70%;
       transform: scale(1);
     }
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
 `
 
 const Text = styled.p`
@@ -76,5 +81,15 @@ const Text = styled.p`
     font-weight: 400;
     font-size: 0.9rem;
     text-align: justify;
+    max-width: 600px;
+    right: 50%;
+    float: right;
+    margin-top: 8rem;
+    margin-right: 5rem;
 
+    
+    @media screen and (max-width: 1000px) {
+      max-width: 300px;
+      margin-right: 2rem;
+    }
 `

@@ -98,7 +98,7 @@ const Background = styled.div`
       color: whitesmoke;
       font-family: 'Times New Roman', Times, serif;
       position: absolute;
-      top: 275%;
+      top: 265%;
       left: 80%;
     }
 
@@ -134,7 +134,7 @@ const Text = styled.p`
     max-width: 250px;
     text-align: justify;
     position: absolute;
-    top: 285%;
+    top: 275%;
     right: 5%;
     margin-left: 2rem;
     z-index: 2;

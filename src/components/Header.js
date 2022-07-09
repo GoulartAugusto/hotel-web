@@ -20,7 +20,9 @@ function Header() {
       <a href="#accommodations" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Accommodations</Option>
       </a>
+      <a href="#gastronomy" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Gastronomy</Option>
+      </a>
       <Option>Promotions</Option>
       <Option>Location</Option>
       <Option>Events</Option>
