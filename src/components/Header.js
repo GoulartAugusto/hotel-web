@@ -23,9 +23,15 @@ function Header() {
       <a href="#gastronomy" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Gastronomy</Option>
       </a>
+      <a href="#promotions" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Promotions</Option>
+      </a>
+      <a href="#location" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Location</Option>
+      </a>
+      <a href="#events" id="click" onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "active" : ""}>
       <Option>Events</Option>
+      </a>
       <Book>Book</Book>
     </Container>
   )
@@ -50,7 +56,6 @@ const Container = styled.div`
     #click {
       text-decoration: none;
       color: white;
-
     }
 `
 
@@ -83,4 +88,8 @@ const Book = styled.button`
     border: 1px solid white;
     cursor: pointer;
     color: white;
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
 `

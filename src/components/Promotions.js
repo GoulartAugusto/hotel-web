@@ -7,7 +7,7 @@ import Promotion03 from "../images/promotion_03.jpg"
 
 function Promotions() {
   return (
-    <Container>
+    <Container id="promotions" >
       <Cards>
         
         <Card>
@@ -89,6 +89,7 @@ const BgImage = styled.img`
     margin: 0;
     position: relative;
     transform: scale(1.1);
+    opacity: 50%;
     :hover{
       overflow: hidden;
       transition: all ease-in 0.5s;
